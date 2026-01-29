@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "serving-bihar",
-=======
-  "name": "serving-bihar-mobile",
->>>>>>> a4737ce5e201ca99615b433386664555cc97d040
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,15 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-=======
     "bootstrap": "^5.3.8",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
->>>>>>> a4737ce5e201ca99615b433386664555cc97d040
     "react-router-dom": "^7.12.0"
   },
   "devDependencies": {
@@ -37,13 +28,6 @@
     "globals": "^16.5.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-<<<<<<< HEAD
-    "vite": "^7.2.4"
-=======
-    "vite": "npm:rolldown-vite@7.2.5"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@7.2.5"
->>>>>>> a4737ce5e201ca99615b433386664555cc97d040
+    "vite": "^5.4.0"
   }
 }
