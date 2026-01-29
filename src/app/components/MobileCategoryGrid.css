@@ -1,0 +1,105 @@
+/* ===============================
+   CATEGORY SECTION (CLEAR SEPARATION)
+================================ */
+.mobile-category-section {
+  padding: 16px;
+  background: #e5e7eb; /* NOTICEABLY darker than cards */
+}
+
+/* Heading */
+.mobile-category-section h3 {
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #020617; /* almost black */
+}
+
+/* Subtitle under heading */
+.mobile-category-section p {
+  font-size: 12px;
+  color: #334155; /* strong grey */
+  margin-bottom: 14px;
+}
+
+/* ===============================
+   GRID
+================================ */
+.mobile-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+/* ===============================
+   CARD (BRIGHT CARD ON DARK BG)
+================================ */
+.mobile-category-card {
+  background: #ffffff; /* PURE WHITE – clear contrast */
+  border-radius: 20px;
+  padding: 16px;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+
+  transition: transform 0.15s ease;
+}
+
+.mobile-category-card:active {
+  transform: scale(0.95);
+}
+
+/* ===============================
+   ICON (STRONG POP)
+================================ */
+.mobile-category-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ===============================
+   TEXT (VERY CLEAR READABILITY)
+================================ */
+.mobile-category-text h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #020617; /* near black */
+}
+
+.mobile-category-text p {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #475569; /* readable grey */
+}
+
+/* ===============================
+   MOBILE TUNING
+================================ */
+@media (max-width: 360px) {
+  .mobile-category-card {
+    padding: 14px;
+  }
+
+  .mobile-category-icon {
+    width: 44px;
+    height: 44px;
+  }
+}

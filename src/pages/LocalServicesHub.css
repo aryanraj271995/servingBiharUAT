@@ -1,0 +1,113 @@
+.lsh-page {
+  width: 100%;
+  height: 800px;
+  background: #a6bfdf;
+}
+
+/* HERO */
+.lsh-hero {
+  padding: 60px 8% 50px;
+  background: linear-gradient(135deg, #1d8cff, #4db5ff);
+  color: #fff;
+   background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.575),
+      rgb(15, 14, 14)
+    ),
+    url("/src/assets/ser.jpg");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.lsh-hero-left {
+  max-width: 700px;
+}
+
+.lsh-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.lsh-hero h1 {
+  font-size: 42px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.lsh-hero h1 span {
+  color: #ffeb3b;
+}
+
+.lsh-subtitle {
+  font-size: 16px;
+  opacity: 0.95;
+  max-width: 520px;
+}
+
+/* SERVICES */
+.lsh-services {
+  margin: 60px auto 40px;
+  width: 65%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.lsh-card {
+  background: #181717;
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(174, 214, 240, 0.08);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.lsh-card:hover {
+  transform: translateY(-6px);
+}
+
+.lsh-icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.lsh-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.lsh-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .lsh-hero {
+    padding: 40px 20px 40px;
+    text-align: center;
+  }
+
+  .lsh-hero h1 {
+    font-size: 28px;
+  }
+
+  .lsh-services {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lsh-services {
+    grid-template-columns: 1fr;
+  }
+}

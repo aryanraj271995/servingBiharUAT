@@ -1,0 +1,172 @@
+/* BACKGROUND */
+.cab-bg {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(15, 14, 14, 0.9)
+    ),
+    url("/src/assets/bihar-background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* MAIN CARD */
+.cab-container {
+  background: #2c2a2a;
+  display: flex;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* LEFT */
+.cab-form-section {
+  flex: 1;
+  padding: 40px;
+  color: #fff;
+}
+
+.cab-form-section h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+/* TABS */
+.cab-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cab-tabs button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cab-tabs .active {
+  background: #000;
+  color: #fff;
+}
+
+/* FORM */
+.cab-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.cab-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.cab-form input:nth-child(5),
+.cab-form input:nth-child(6) {
+  grid-column: span 2;
+}
+
+.cab-checkbox {
+  grid-column: span 2;
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #ddd;
+}
+
+/* BUTTON */
+.cab-book-btn {
+  grid-column: span 2;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* RIGHT SIDE – UPDATED PART */
+/* ========================= */
+
+.cab-image-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+}
+
+/* Yellow car panel */
+.cab-yellow-panel {
+  background: #f5c542;
+  border-radius: 14px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cab-main-vehicle {
+  width: 300px;
+  display: block;
+}
+
+/* Vertical vehicle strip */
+.cab-vehicle-strip {
+  background: #111;
+  border-radius: 14px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.cab-vehicle-strip img {
+  width: 70px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.cab-vehicle-strip img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .cab-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cab-image-section {
+    display: none;
+  }
+
+  .cab-form {
+    grid-template-columns: 1fr;
+  }
+
+  .cab-form input,
+  .cab-book-btn,
+  .cab-checkbox {
+    grid-column: span 1;
+  }
+}

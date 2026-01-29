@@ -1,0 +1,50 @@
+/* ===============================
+   GLOBAL RESET + BASE
+================================ */
+:root {
+  --sb-bg: #020617;     /* 🔥 DARK BACKGROUND */
+  --sb-text: #e5e7eb;   /* text color */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--sb-bg);
+  color: var(--sb-text);
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--pad-mobile);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--pad-desktop);
+  }
+}
+
+/* ===============================
+   IMPORTANT NOTE
+================================ */
+/*
+  ❌ Yahan kabhi bhi .sb-header,
+     header, nav, a jaise
+     component-specific rules
+     mat likhna.
+
+  ✔ Header / Footer / Cards
+     sirf unke apne CSS me
+     style honge.
+*/

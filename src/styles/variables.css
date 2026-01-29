@@ -1,0 +1,10 @@
+:root {
+  --sb-dark: #14142b;
+  --sb-light: #ffffff;
+  --sb-bg: #faf8f7;
+  --sb-text: #111827;
+
+  --container-width: auto;
+  --pad-mobile: 16px;
+  --pad-desktop: 24px;
+}

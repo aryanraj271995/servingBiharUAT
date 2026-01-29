@@ -1,0 +1,218 @@
+/* ===============================
+   ROOT FEEL (Luxury clean)
+================================ */
+.ec-section {
+  max-width: 1240px;
+  margin: 90px auto;
+  padding: 0 18px;
+}
+
+/* ===============================
+   HEADER (Bold + Elegant – Fixed)
+================================ */
+.ec-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.ec-header h2 {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+/* Gradient city name */
+.ec-header h2 span {
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+
+  /* ✅ Standard + Webkit (FIXED) */
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.ec-header p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #64748b;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===============================
+   RESPONSIVE TUNING
+================================ */
+@media (max-width: 768px) {
+  .ec-header h2 {
+    font-size: 28px;
+  }
+
+  .ec-header p {
+    font-size: 14.5px;
+  }
+}
+
+/* ===============================
+   GRID
+================================ */
+.ec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 28px;
+}
+
+/* ===============================
+   CARD (WOW EFFECT)
+================================ */
+.ec-card {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border-radius: 18px;
+  padding: 26px 24px;
+  cursor: pointer;
+  border: 1px solid #eef2f7;
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* subtle glow line */
+.ec-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(56, 189, 248, 0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* hover magic */
+.ec-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 22px 45px rgba(15, 23, 42, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.ec-card:hover::before {
+  opacity: 1;
+}
+
+/* ===============================
+   ICON (Premium badge)
+================================ */
+.ec-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 18px;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.18),
+    inset 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+
+/* ===============================
+   TEXT
+================================ */
+.ec-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.ec-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ===============================
+   TABLET (≤ 1024px)
+================================ */
+@media (max-width: 1024px) {
+  .ec-grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 22px;
+  }
+
+  .ec-header h2 {
+    font-size: 32px;
+  }
+}
+
+/* ===============================
+   MOBILE (≤ 768px)
+================================ */
+@media (max-width: 768px) {
+  .ec-section {
+    margin: 70px auto;
+  }
+
+  .ec-header h2 {
+    font-size: 26px;
+  }
+
+  .ec-header p {
+    font-size: 14.5px;
+  }
+
+  .ec-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .ec-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .ec-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
+  }
+
+  .ec-card h3 {
+    font-size: 15px;
+  }
+
+  .ec-card p {
+    font-size: 13px;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE (≤ 480px)
+================================ */
+@media (max-width: 480px) {
+  .ec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ec-header h2 {
+    font-size: 24px;
+  }
+
+  .ec-card {
+    padding: 22px;
+  }
+}

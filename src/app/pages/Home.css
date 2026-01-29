@@ -1,0 +1,128 @@
+/* ===============================
+   HOME WRAPPER
+================================ */
+.home-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 14px 96px;
+  background: #f8fafc;
+}
+
+/* ===============================
+   HORIZONTAL SERVICE SCROLL
+================================ */
+.service-scroll {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 8px 2px 14px;
+  scrollbar-width: none;
+}
+
+.service-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   SERVICE ICON
+================================ */
+.service-icon {
+  text-align: center;
+  min-width: 72px;
+  font-size: 12px;
+  color: #374151;
+}
+
+.icon-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 6px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.service-icon:active .icon-circle {
+  transform: scale(0.92);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   OFFER BANNER
+================================ */
+.offer-banner {
+  margin-top: 18px;
+  background: linear-gradient(135deg, #0a8f08, #13ce13);
+  color: #ffffff;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 14px 28px rgba(19, 206, 19, 0.35);
+}
+
+.offer-banner h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.offer-banner p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* ===============================
+   PROVIDER CARD
+================================ */
+.provider-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.provider-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.provider-img {
+  height: 130px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+  margin-bottom: 8px;
+}
+
+/* ===============================
+   BOTTOM NAVIGATION
+================================ */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 8px;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.bottom-nav div {
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.bottom-nav .active {
+  color: #16a34a;
+  font-weight: 600;
+}

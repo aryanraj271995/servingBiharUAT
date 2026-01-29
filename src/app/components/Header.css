@@ -1,0 +1,179 @@
+/* ===============================
+   MOBILE HEADER CARD
+================================ */
+.sb-header {
+  background: #1f1f1f;
+  border-radius: 28px;
+  padding: 18px 16px 20px;
+  margin: 12px;
+  color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ===============================
+   TOP ROW (HELLO + LOCATION)
+================================ */
+.sb-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* FIX: left is invalid */
+  text-align: left;
+}
+
+.sb-top h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+/* LOCATION TEXT – CLEAN (NO BACKGROUND) */
+.location-text {
+  font-size: 13px;
+  padding: 0;                 /* removed padding */
+  border-radius: 0;           /* removed pill */
+  background: none;           /* 🔥 main fix */
+  color: #d1d5db;             /* soft readable gray */
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ===============================
+   SEARCH BAR
+================================ */
+.sb-search {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.sb-search input {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+  color: #020617;
+}
+
+.sb-search input::placeholder {
+  color: #9ca3af;
+}
+
+.sb-search button {
+  padding: 0 18px;
+  border-radius: 999px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ===============================
+   CATEGORY ROW (LEFT–RIGHT SCROLL)
+================================ */
+.sb-categories {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.sb-categories::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   CATEGORY CHIP
+================================ */
+.sb-chip {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 64px;
+  padding: 10px 12px;
+
+  background: #2a2a2a; /* slightly lighter than header */
+  border-radius: 14px;
+
+  font-size: 12px;
+  color: #e5e7eb;
+  cursor: pointer;
+  user-select: none;
+
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.sb-chip:active {
+  transform: scale(0.95);
+}
+
+.sb-chip-icon {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/* ===============================
+   LOCATION MODAL (UNCHANGED LOGIC)
+================================ */
+.loc-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.loc-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.loc-box h3 {
+  margin-bottom: 6px;
+}
+
+.loc-box input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.loc-box button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ===============================
+   MOBILE ONLY TUNING
+================================ */
+@media (min-width: 768px) {
+  .sb-header {
+    max-width: 420px;
+    margin: 16px auto;
+  }
+}

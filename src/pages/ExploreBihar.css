@@ -1,0 +1,60 @@
+.explore-page {
+  padding: 20px;
+}
+
+/* HERO */
+.explore-hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.explore-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.explore-hero p {
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* GRID */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.explore-card {
+  background: #3533335b;
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgb(20, 179, 228);
+  transition: transform 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-6px);
+}
+
+.explore-card .icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.explore-card h3 {
+  margin-bottom: 6px;
+}
+
+/* INFO */
+.explore-info {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.explore-info h2 {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,160 @@
+.medical-page {
+  width: 100%;
+  background: #f8fbff;
+  height: 600px;
+}
+
+/* HERO */
+.medical-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 8%;
+  background: linear-gradient(135deg, #0a6cff, #4da3ff);
+  color: #fff;
+
+}
+
+.medical-hero-left {
+  margin-left: 40px; /* 20px / 30px / 50px try kar sakte ho */
+}
+
+.medical-rating {
+  background: #ffffff22;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.medical-hero h1 {
+  font-size: 44px;
+  margin: 20px 0;
+  line-height: 1.3;
+}
+
+.medical-hero h1 span {
+  color: #ffeb3b;
+}
+
+/* SEARCH */
+.medical-search {
+  display: flex;
+  background: #fff;
+  border-radius: 50px;
+  padding: 8px;
+  gap: 8px;
+}
+
+.medical-search select,
+.medical-search input {
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.medical-search input {
+  flex: 1;
+}
+
+.medical-search button {
+  background: #0a6cff;
+  color: #fff;
+  border: none;
+  padding: 0 24px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+/* HERO IMAGE */
+.medical-hero-right img {
+ width: auto;
+}
+
+.medical-hero-right {
+  position: relative;
+  right: 120px; /* value adjust: -30px / -50px */
+}
+
+/* SERVICES */
+.medical-services {
+  margin: -40px auto 40px;
+  background: #161616;
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-card {
+  text-align: center;
+}
+
+.service-card span {
+  font-size: 28px;
+}
+
+.service-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .medical-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .medical-hero h1 {
+    font-size: 28px;
+  }
+
+  .medical-search {
+    flex-direction: column;
+    border-radius: 12px;
+  }
+
+  .medical-search button {
+    width: 100%;
+  }
+
+  .medical-hero-right {
+    display: none;
+  }
+
+  .medical-services {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin-top: -20px;
+  }
+}
+
+.service-card {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.466);
+  transform: translateY(-4px);
+}
+
+.service-card:hover span {
+  transform: scale(1.1);
+}
+
+.service-card span {
+  font-size: 28px;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}

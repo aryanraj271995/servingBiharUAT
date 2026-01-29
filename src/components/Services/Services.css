@@ -1,0 +1,164 @@
+/* ===============================
+   SERVICES SECTION (FLIPKART STYLE)
+================================ */
+.sb-services {
+  padding: 0px 0;
+  background: #f5f1f6;              /* Flipkart page bg */
+}
+
+/* ===============================
+   SERVICES CONTAINER CARD
+================================ */
+.sb-services .container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 16px 20px;
+
+  background: #383737;              /* white card */
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 0px;
+  border: 5px solid #e0e0e0;        /* light grey border */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06); /* subtle shadow */
+}
+
+
+/* ===============================
+   HORIZONTAL ROW (FINAL FIX)
+================================ */
+/* ===============================
+   SERVICES ROW – FINAL LOGIC
+================================ */
+.sb-services-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.sb-services-row::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+@media (max-width: 1440px) {
+  .sb-services-row {
+    gap: 24px;
+  }
+}
+
+
+
+.sb-services-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   FLIPKART STYLE CARD (FINAL FIX)
+================================ */
+.sb-fk-card {
+  min-width: 110px;
+  height: 100px;                  /* 🔥 KEY: equal card height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ===============================
+   ICON (FINAL FIX)
+================================ */
+.sb-fk-icon {
+  width: 64px;
+  height: 64px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+  background: #080808;
+
+  font-size: 30px;
+  line-height: 1;                /* 🔥 RESET (0 hata diya) */
+  transition: transform 0.25s ease;
+}
+
+.sb-fk-card:hover .sb-fk-icon {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   TEXT (BOTTOM ALIGNED – FLIPKART STYLE)
+================================ */
+.sb-fk-text {
+  margin-top: auto;              /* 🔥 TEXT SAME LINE ME */
+  font-size: 14px;
+  font-weight: 500;
+  color: #fcfafa;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ===============================
+   SEE MORE CARD
+================================ */
+.sb-see-more {
+  height: 100px;
+}
+
+.sb-see-more .sb-fk-icon {
+  background: #e8f0ff;
+  color: #1a73e8;
+  font-size: 28px;
+}
+
+.sb-see-more .sb-fk-text {
+  color: #1a73e8;
+  font-weight: 600;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .sb-fk-card {
+    min-width: 90px;
+    height: 105px;
+  }
+
+  .sb-fk-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .sb-fk-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sb-services-row {
+    flex-wrap: nowrap;      /* single row */
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+}
+

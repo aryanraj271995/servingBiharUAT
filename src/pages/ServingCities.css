@@ -1,0 +1,107 @@
+.sc-page {
+  padding: 48px 20px 80px;
+  text-align: center;
+
+  background-image:
+    linear-gradient(
+      rgba(156, 213, 248, 0.92),
+      rgba(15, 14, 14, 0.92)
+    ),
+    url("/src/assets/bihar-background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.sc-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #0f172a;
+}
+
+.sc-title span {
+  color: #7c3aed;
+}
+
+/* GRID */
+.sc-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* CARD (CENTERED CONTENT) */
+.sc-card {
+  background: #ffffffb0;
+  border-radius: 16px;
+  padding: 28px 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* 👈 CENTER ICON */
+  justify-content: center;
+
+  text-align: center;       /* 👈 CENTER TEXT */
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.sc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgb(5, 5, 5);
+}
+
+/* ICON */
+.sc-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+/* TEXT */
+.sc-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #020617;
+}
+
+.sc-card p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .sc-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .sc-grid {
+    grid-template-columns: 1fr;
+  }
+}

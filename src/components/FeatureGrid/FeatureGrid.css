@@ -1,0 +1,126 @@
+/* ===============================
+   SECTION
+================================ */
+.fg-section {
+  background: #e2e2e4;
+  padding: 20px 0;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.fg-container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 10 16px;
+
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 16px;
+}
+
+/* ===============================
+   LEFT GRID (4 CARDS)
+================================ */
+.fg-left {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.fg-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.fg-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.fg-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.fg-desc {
+  font-size: 13px;
+  color: #616161;
+}
+
+/* ===============================
+   RIGHT AD CARD
+================================ */
+.fg-right {
+  display: flex;
+}
+
+.fg-ad {
+  width: 100%;
+  background: #fff7e6;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fg-ad h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.fg-ad p {
+  font-size: 13px;
+  color: #424242;
+  margin-bottom: 12px;
+}
+
+.fg-ad button {
+  align-self: center;
+  padding: 8px 14px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  background: #2874f0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .fg-container {
+    grid-template-columns: 1fr;
+  }
+
+  .fg-left {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fg-right {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .fg-left {
+    grid-template-columns: 1fr;
+  }
+}

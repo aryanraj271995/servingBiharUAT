@@ -1,0 +1,37 @@
+.emergency-page {
+  padding: 32px;
+}
+
+.emergency-title {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.emergency-title span {
+  color: #dc2626;
+}
+
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.emergency-card {
+  background: #3533335b;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.emergency-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgb(20, 179, 228);
+}
+
+.emergency-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}

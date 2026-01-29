@@ -1,0 +1,280 @@
+/* ===============================
+   HEADER
+================================ */
+
+.sb-header {
+  height: 72px;
+  display: flex;
+}
+
+/* 🔒 BACKGROUND ISOLATION LAYER (MAIN FIX) */
+.sb-header-bg {
+  width: 100%;
+  height: 72px;
+  background: #0f172a; /* FINAL SOURCE OF TRUTH */
+  display: flex;
+  align-items: center;
+}
+
+.sb-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ===============================
+   LOGO
+================================ */
+
+.sb-logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  /* ✅ FIX: underline removed for Link */
+  text-decoration: none;
+}
+
+.sb-logo:hover {
+  text-decoration: none;
+}
+
+/* ===============================
+   SEARCH
+================================ */
+
+.sb-search {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 520px;
+}
+
+.sb-search input {
+  flex: 1;
+  min-width: 140px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+
+/* LOCATION INPUT WRAPPER */
+.sb-location-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+/* AUTO LOCATION BADGE */
+.sb-location-badge {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.sb-search button {
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ===============================
+   NAV
+================================ */
+
+.sb-nav {
+  display: none;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.sb-nav a {
+  color: #e5e7eb;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* ===============================
+   DESKTOP ONLY
+================================ */
+
+@media (min-width: 768px) {
+  .sb-search {
+    display: flex;
+  }
+
+  .sb-nav {
+    display: flex;
+  }
+}
+
+/* Default link color */
+.sb-nav a {
+  color: #9aa0a6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Hover – sirf color change, no box */
+.sb-nav a:hover {
+  color: #1e88e5;
+  background: none;
+}
+
+/* Active / current page */
+.sb-nav a.active {
+  color: #fc098f;
+  font-weight: 600;
+}
+
+.sb-nav a.active:hover {
+  color: #0d1b2a;
+}
+
+/* ===============================
+   MOBILE MENU BUTTON
+================================ */
+
+.sb-menu-btn {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===============================
+   MOBILE DRAWER MENU
+================================ */
+
+.sb-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: #020617;
+  padding: 20px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  animation: slideIn 0.25s ease-out;
+}
+
+.sb-mobile-menu a {
+  color: #e5e7eb;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.sb-close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .sb-menu-btn {
+    display: block;
+  }
+
+  .sb-nav {
+    display: none;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* VISIBILITY CONTROL */
+.sb-desktop-only {
+  display: block;
+}
+.sb-mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sb-desktop-only {
+    display: none;
+  }
+  .sb-mobile-only {
+    display: block;
+  }
+}
+
+/* ===============================
+   MOBILE HEADER
+================================ */
+
+.sb-m-header {
+  background: #0f172a;
+}
+
+.sb-m-top {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.sb-m-menu {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.sb-m-logo {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sb-m-search {
+  padding: 8px 12px 12px;
+}
+
+.sb-m-search input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
